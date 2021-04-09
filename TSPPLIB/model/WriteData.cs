@@ -20,8 +20,8 @@ namespace TSPP2.model
             {
                 StreamWriter streamWriter = new StreamWriter(path);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append("id         name                              author" +
-                    "                  year of book      location");
+                stringBuilder.Append("id        name                            author" +
+                    "                  year of book     location");
                 streamWriter.WriteLine(stringBuilder.ToString());
                 int id = stringBuilder.ToString().IndexOf("id");
                 int authorLine = stringBuilder.ToString().IndexOf("author");

@@ -21,7 +21,7 @@ namespace TSPP2.model
                 StreamReader streamReader = new StreamReader(path);
                 while (!streamReader.EndOfStream)
                 {
-                   String result = streamReader.ReadLine();
+                    String result = streamReader.ReadLine();
                     result.Trim();
                     string[] toRead = result.Split(',');
                     int id = Convert.ToInt32(toRead[0]);
