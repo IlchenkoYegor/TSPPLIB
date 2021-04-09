@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TSPP2.model;
+using TSPPLIB.model;
 
 namespace TSPPLIB
 {
@@ -20,10 +21,11 @@ namespace TSPPLIB
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            List<Book> l = new List<Book>();
-            FileReader.OpenFile(l);
-            WriteData.Write(l);
 
+            MainModel mainmodel = new MainModel();
+            mainmodel.Add(new Book(11, "RR", 1000, "@@@AA", 13));
+            mainmodel.FilterByAuthor("RR", "@@@AA");
+            mainmodel.ToWrite();
         }
     }
 }

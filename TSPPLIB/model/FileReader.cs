@@ -12,10 +12,10 @@ namespace TSPP2.model
     {
         const string path = "listofbooks.txt";
         
-        internal static List<Book> OpenFile(List<Book> listOfBooks)
+        internal static List<Book> OpenFile()
         {
             
-            //List<Book> listOfBooks = new List<Book>();
+            List<Book> listOfBooks = new List<Book>();
             try
             {
                 StreamReader streamReader = new StreamReader(path);
