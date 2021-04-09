@@ -54,10 +54,6 @@
     </Compile>
     <Compile Include="model\Book.cs" />
     <Compile Include="model\FileReader.cs" />
-    <Compile Include="model\MainModel.cs" />
-    <Compile Include="model\Saver.cs" />
-    <Compile Include="model\SelectXX.cs" />
-    <Compile Include="model\SelectXY.cs" />
     <Compile Include="model\WriteData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,10 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controller\" />
-    <Folder Include="view\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
