@@ -9,7 +9,7 @@ using TSPP2.model;
 
 namespace TSPPLIB.model
 {
-    class Saver
+    public class Saver
     {
             const string path = "listofbooks.txt";
 

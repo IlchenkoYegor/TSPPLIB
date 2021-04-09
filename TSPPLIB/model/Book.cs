@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TSPP2.model
 {
-    class Book
+    public class Book
     {
         private int id;
         private string author;

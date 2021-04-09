@@ -7,7 +7,7 @@ using TSPP2.model;
 
 namespace TSPPLIB.model
 {
-    class SelectXY
+    public class SelectXY
     {
         public static List<Book> Select(List<Book> books, string name, string author)
         {

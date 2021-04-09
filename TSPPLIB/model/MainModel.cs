@@ -7,7 +7,7 @@ using TSPP2.model;
 
 namespace TSPPLIB.model
 {
-    class MainModel
+    public class MainModel
     {
 
         public MainModel()

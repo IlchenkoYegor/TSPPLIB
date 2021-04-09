@@ -7,7 +7,7 @@ using TSPP2.model;
 
 namespace TSPPLIB.model
 {
-    class SelectXX
+    public class SelectXX
     {
         public static List<Book> SelectYear(List<Book> books ,int year)
         {

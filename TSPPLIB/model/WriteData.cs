@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TSPP2.model
 {
-    class WriteData
+    public class WriteData
     {
         const string path = "resultofsearch.txt";
 
