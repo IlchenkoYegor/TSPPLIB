@@ -97,7 +97,7 @@ namespace TSPPLIB.view
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 74);
+            this.label1.Size = new System.Drawing.Size(351, 74);
             this.label1.TabIndex = 0;
             this.label1.Text = "КНИГОЛЮБ";
             // 
@@ -118,7 +118,7 @@ namespace TSPPLIB.view
             this.label2.ForeColor = System.Drawing.Color.Chocolate;
             this.label2.Location = new System.Drawing.Point(259, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(452, 65);
+            this.label2.Size = new System.Drawing.Size(454, 65);
             this.label2.TabIndex = 0;
             this.label2.Text = "БІБЛІОТЕКА КНИГ";
             // 
@@ -147,6 +147,7 @@ namespace TSPPLIB.view
             this.button7.TabIndex = 5;
             this.button7.Text = "Зберегти в текстовий файл";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -158,6 +159,7 @@ namespace TSPPLIB.view
             this.button6.TabIndex = 4;
             this.button6.Text = "Зберегти зміни";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // button5
             // 
@@ -169,6 +171,7 @@ namespace TSPPLIB.view
             this.button5.TabIndex = 3;
             this.button5.Text = "Видалити книгу";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button4
             // 
@@ -297,30 +300,35 @@ namespace TSPPLIB.view
             // 
             this.Column1.HeaderText = "Шифр";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 50;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Назва";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 300;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Автор";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 200;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Рік видання";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 70;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Місце знаходження";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 80;
             // 
             // errorProvider1

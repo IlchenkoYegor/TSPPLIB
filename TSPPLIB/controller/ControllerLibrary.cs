@@ -99,6 +99,7 @@ namespace TSPPLIB.controller
         {
             libraryForm.Visible = false;
             authorizationForm.Visible = true;
+            model.UpdateDataState();
         }
         public void CancelSome(Form r)
         {
@@ -215,7 +216,11 @@ namespace TSPPLIB.controller
            
             model.Delete(bookToDel);
         }
-
+        public void Remove()
+        {
+            Remover();
+            libraryForm.dataGridView1.Rows.RemoveAt(libraryForm.dataGridView1.SelectedRows[0].Index);
+        }
         public void EditData()
         {
             if (edit.textBoxNameEdit.Text == null || edit.textBoxAuthorEdit.Text == null
@@ -251,7 +256,25 @@ namespace TSPPLIB.controller
             {
                 MessageBox.Show("Помилки при введенні даних ");
             }
-      
+            
         }
-}
+        public void SaveDataButtonHandler()
+        {
+            MessageBox.Show("файл listofbooks.txt успішно збережений");
+            model.SaveChanges();
+        }
+        public void WriteData()
+        {
+            model.ToWrite();
+            MessageBox.Show("Список відібраних книг збережено до файлу resultofsearch.txt.");
+        }
+        public void Remove()
+        {
+            if (libraryForm.dataGridView1.Rows.Count <= 10)
+            {
+                MessageBox.Show("Неможливо видалаити запис. Кількість записів повинна бути більше 10.");        
+                return;
+            }
+        }
+    }
 }

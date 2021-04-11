@@ -13,13 +13,13 @@ namespace TSPPLIB.model
     {
             const string path = "listofbooks.txt";
 
-            internal static List<Book> OpenFile(List<Book> listOfBooks)
+            internal static void OpenFile(List<Book> listOfBooks)
             {
 
                 //List<Book> listOfBooks = new List<Book>();
                 try
                 {
-                    StreamWriter streamReader = new StreamWriter(path);
+                    StreamWriter streamWriter = new StreamWriter(path);
                     foreach (Book item in listOfBooks)
                     {
                         StringBuilder stringBuilder = new StringBuilder();
@@ -29,17 +29,20 @@ namespace TSPPLIB.model
                         stringBuilder.Append(item.YearOfBook+",");
                         stringBuilder.Append(item.Location+",");
                         String result = stringBuilder.ToString();
+                        streamWriter.WriteLine(result);
+                        streamWriter.Flush();
                     }
-                    return listOfBooks;
-                    streamReader.Close();
+                streamWriter.Close();
+                return;
+                    
 #pragma warning disable CS0168 // Переменная "e" объявлена, но ни разу не использована.
                 }
                 catch (Exception e)
 #pragma warning restore CS0168 // Переменная "e" объявлена, но ни разу не использована.
                 {
-                    MessageBox.Show("Exception occured !No such file have found!");
+                    MessageBox.Show("Exception occured !No such file have found! " +e.StackTrace);
                 }
-                return null;
+                return;
             }
         }
     }
