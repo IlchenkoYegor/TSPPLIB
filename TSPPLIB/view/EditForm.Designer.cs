@@ -61,6 +61,7 @@ namespace TSPPLIB.view
             this.saveEditBtn.TabIndex = 22;
             this.saveEditBtn.Text = "Зберегти";
             this.saveEditBtn.UseVisualStyleBackColor = true;
+            this.saveEditBtn.Click += new System.EventHandler(this.SaveEditBtn_Click);
             // 
             // textBoxLocationEdit
             // 
@@ -147,6 +148,7 @@ namespace TSPPLIB.view
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 328);
+            this.ControlBox = false;
             this.Controls.Add(this.cancelEditBtn);
             this.Controls.Add(this.saveEditBtn);
             this.Controls.Add(this.textBoxLocationEdit);
@@ -167,18 +169,17 @@ namespace TSPPLIB.view
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelEditBtn;
-        private System.Windows.Forms.Button saveEditBtn;
-        private System.Windows.Forms.TextBox textBoxLocationEdit;
-        private System.Windows.Forms.TextBox textBoxYearEdit;
-        private System.Windows.Forms.TextBox textBoxAuthorEdit;
-        private System.Windows.Forms.TextBox textBoxNameEdit;
         private System.Windows.Forms.Label label5Add;
         private System.Windows.Forms.Label label4Add;
         private System.Windows.Forms.Label label3Add;
         private System.Windows.Forms.Label label2Add;
         private System.Windows.Forms.Label label1Add;
-        private System.Windows.Forms.TextBox textBoxIdEdit;
+        public System.Windows.Forms.Button cancelEditBtn;
+        public System.Windows.Forms.Button saveEditBtn;
+        public System.Windows.Forms.TextBox textBoxLocationEdit;
+        public System.Windows.Forms.TextBox textBoxYearEdit;
+        public System.Windows.Forms.TextBox textBoxAuthorEdit;
+        public System.Windows.Forms.TextBox textBoxNameEdit;
+        public System.Windows.Forms.TextBox textBoxIdEdit;
     }
 }

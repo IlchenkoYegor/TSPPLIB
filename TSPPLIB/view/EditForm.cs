@@ -27,5 +27,10 @@ namespace TSPPLIB.view
         {
             
         }
+
+        private void SaveEditBtn_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.EditData();
+        }
     }
 }
