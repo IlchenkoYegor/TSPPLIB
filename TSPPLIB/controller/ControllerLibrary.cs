@@ -218,8 +218,16 @@ namespace TSPPLIB.controller
         }
         public void Remove()
         {
-            Remover();
-            libraryForm.dataGridView1.Rows.RemoveAt(libraryForm.dataGridView1.SelectedRows[0].Index);
+            if (libraryForm.dataGridView1.Rows.Count <= 10)
+            {
+                MessageBox.Show("Неможливо видалаити запис. Кількість записів повинна бути більше 10.");
+                return;
+            }
+            if (libraryForm.dataGridView1.SelectedRows.Count > 0)
+            {
+                Remover();
+                libraryForm.dataGridView1.Rows.RemoveAt(libraryForm.dataGridView1.SelectedRows[0].Index);
+            }
         }
         public void EditData()
         {
@@ -268,13 +276,6 @@ namespace TSPPLIB.controller
             model.ToWrite();
             MessageBox.Show("Список відібраних книг збережено до файлу resultofsearch.txt.");
         }
-        public void Remove()
-        {
-            if (libraryForm.dataGridView1.Rows.Count <= 10)
-            {
-                MessageBox.Show("Неможливо видалаити запис. Кількість записів повинна бути більше 10.");        
-                return;
-            }
-        }
+       
     }
 }
