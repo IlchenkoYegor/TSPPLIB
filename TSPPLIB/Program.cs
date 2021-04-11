@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TSPPLIB.controller;
+using TSPPLIB.model;
+using TSPPLIB.view;
 
 namespace TSPPLIB
 {
@@ -16,7 +19,16 @@ namespace TSPPLIB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            //LibraryForm libraryForm = new LibraryForm();
+            MainModel mainModel = new MainModel();  
+            EditForm editForm = new EditForm();
+            Form1 form1 = new Form1();
+            LibraryForm libraryForm = new LibraryForm(mainModel);
+            AddForm addForm = new AddForm();
+            ControllerLibrary controllerLibrary = new ControllerLibrary(mainModel, libraryForm, editForm, form1, addForm);
+
+            Application.Run(libraryForm);
         }
     }
 }

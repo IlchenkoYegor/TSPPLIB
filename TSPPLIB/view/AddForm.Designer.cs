@@ -131,6 +131,7 @@ namespace TSPPLIB.view
             this.saveAddBtn.TabIndex = 10;
             this.saveAddBtn.Text = "Зберегти";
             this.saveAddBtn.UseVisualStyleBackColor = true;
+            this.saveAddBtn.Click += new System.EventHandler(this.saveAddBtn_Click);
             // 
             // cancelAddBtn
             // 
@@ -166,18 +167,17 @@ namespace TSPPLIB.view
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxIdAdd;
         private System.Windows.Forms.Label label1Add;
         private System.Windows.Forms.Label label2Add;
         private System.Windows.Forms.Label label3Add;
         private System.Windows.Forms.Label label4Add;
         private System.Windows.Forms.Label label5Add;
-        private System.Windows.Forms.TextBox textBoxNameAdd;
-        private System.Windows.Forms.TextBox textBoxAuthorAdd;
-        private System.Windows.Forms.TextBox textBoxYearAdd;
-        private System.Windows.Forms.TextBox textBoxLocationAdd;
-        private System.Windows.Forms.Button saveAddBtn;
-        private System.Windows.Forms.Button cancelAddBtn;
+        internal System.Windows.Forms.TextBox textBoxIdAdd;
+        internal System.Windows.Forms.TextBox textBoxNameAdd;
+        internal System.Windows.Forms.TextBox textBoxAuthorAdd;
+        internal System.Windows.Forms.TextBox textBoxYearAdd;
+        internal System.Windows.Forms.TextBox textBoxLocationAdd;
+        internal System.Windows.Forms.Button saveAddBtn;
+        internal System.Windows.Forms.Button cancelAddBtn;
     }
 }

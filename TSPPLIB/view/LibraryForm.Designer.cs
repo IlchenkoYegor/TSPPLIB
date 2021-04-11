@@ -35,6 +35,7 @@ namespace TSPPLIB.view
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace TSPPLIB.view
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,6 +133,17 @@ namespace TSPPLIB.view
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button7.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.button7.Location = new System.Drawing.Point(21, 331);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(176, 65);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Зберегти в текстовий файл";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -176,6 +187,7 @@ namespace TSPPLIB.view
             this.button3.TabIndex = 1;
             this.button3.Text = "Додати книгу";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -251,17 +263,6 @@ namespace TSPPLIB.view
             this.textBox1.Size = new System.Drawing.Size(295, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.button7.Location = new System.Drawing.Point(21, 331);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(176, 65);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Зберегти в текстовий файл";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -272,6 +273,7 @@ namespace TSPPLIB.view
             this.Column3,
             this.Column4,
             this.Column5});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.Location = new System.Drawing.Point(-9, 210);
             this.dataGridView1.Name = "dataGridView1";
@@ -353,11 +355,11 @@ namespace TSPPLIB.view
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        internal System.Windows.Forms.DataGridView dataGridView1;
     }
 }

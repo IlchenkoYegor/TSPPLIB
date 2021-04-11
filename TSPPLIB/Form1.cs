@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TSPP2.model;
+using TSPPLIB.controller;
 using TSPPLIB.model;
 
 namespace TSPPLIB
@@ -18,7 +19,11 @@ namespace TSPPLIB
         {
             InitializeComponent();
         }
-
+        ControllerLibrary controllerLibrary;
+        public void setController(ControllerLibrary controllerLibrary)
+        {
+            this.controllerLibrary = controllerLibrary;
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
 
