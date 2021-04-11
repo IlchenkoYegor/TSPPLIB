@@ -31,8 +31,9 @@ namespace TSPP2.model
                     int location = Convert.ToInt32(toRead[4]);
                     listOfBooks.Add(new Book(id, author, yearOfBook, name, location));
                 }
-                return listOfBooks;
                 streamReader.Close();
+                return listOfBooks;
+                
 #pragma warning disable CS0168 // Переменная "e" объявлена, но ни разу не использована.
             } catch(Exception e)
 #pragma warning restore CS0168 // Переменная "e" объявлена, но ни разу не использована.
