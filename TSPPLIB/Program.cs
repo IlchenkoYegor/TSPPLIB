@@ -23,12 +23,12 @@ namespace TSPPLIB
             //LibraryForm libraryForm = new LibraryForm();
             MainModel mainModel = new MainModel();  
             EditForm editForm = new EditForm();
-            Authorization form1 = new Authorization();
+            Authorization authorization = new Authorization();
             LibraryForm libraryForm = new LibraryForm(mainModel);
             AddForm addForm = new AddForm();
-            ControllerLibrary controllerLibrary = new ControllerLibrary(mainModel, libraryForm, editForm, form1, addForm);
+            ControllerLibrary controllerLibrary = new ControllerLibrary(mainModel, libraryForm, editForm, authorization, addForm);
 
-            Application.Run(form1);
+            Application.Run(authorization);
         }
     }
 }

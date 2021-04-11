@@ -63,8 +63,8 @@ namespace TSPPLIB.controller
         {
             if (libraryForm.textBox3.Text.Equals("") || libraryForm.textBox3 == null)
             {
-                libraryForm.errorProvider1.SetError(libraryForm.textBox1, "поле повинне бути заповнене");
-                libraryForm.errorProvider1.SetError(libraryForm.textBox2, "поле повинне бути заповнене");
+                libraryForm.errorProvider1.SetError(libraryForm.textBox1, "поле повинне бути заповнене.");
+                libraryForm.errorProvider1.SetError(libraryForm.textBox2, "поле повинне бути заповнене.");
                 //libraryForm.errorProvider1.SetError(libraryForm.textBox3, "поле повинне бути заповнене");
                 return;
             }
@@ -93,7 +93,7 @@ namespace TSPPLIB.controller
             model.FilterByAuthor(author, name);
             
             LoadSelected();
-            MessageBox.Show("Пошук за автором " + author + " та назвою " + name + " був проведений");
+            MessageBox.Show("Пошук за автором " + author + " та назвою " + name + " був проведений.");
         }
         public void ToAuthorizationForm()
         {
@@ -109,13 +109,17 @@ namespace TSPPLIB.controller
         {
             addForm.Visible = true;
             libraryForm.Visible = false;
+            if (libraryForm.dataGridView1.Rows.Count < 10)
+            {
+                addForm.cancelAddBtn.Enabled = false;
+            }
         }
         public void AddBook()
         {
             if(addForm.textBoxNameAdd.Text == null || addForm.textBoxAuthorAdd.Text == null 
                 || addForm.textBoxNameAdd.Text.Equals("") || addForm.textBoxAuthorAdd.Text.Equals(""))
             {
-                MessageBox.Show("Поля \"Назва\" та \"Автор\" повинні бути заповнені");
+                MessageBox.Show("Поля \"Назва\" та \"Автор\" повинні бути заповнені.");
                 return;
             }
             try
@@ -127,17 +131,25 @@ namespace TSPPLIB.controller
                 int location = Convert.ToInt32(addForm.textBoxLocationAdd.Text.ToString());
                 Book currentBook = new TSPP2.model.Book(id, author, yearOfBook, name, location);
                 model.Add(currentBook);
+                if (libraryForm.dataGridView1.Rows.Count < 10)
+                {
+                    int remainingCount = 10 - libraryForm.dataGridView1.Rows.Count;
+                    MessageBox.Show("Кількість записів повинна бути більше 10. Додайте ще " + remainingCount + " записів.");
+                    libraryForm.dataGridView1.Rows.Add(currentBook.Id, currentBook.Name, currentBook.Author, currentBook.YearOfBook, currentBook.Location);
+                    return;
+                }
                 addForm.Visible = false;
                 libraryForm.Visible = true;
                 libraryForm.dataGridView1.Rows.Add(currentBook.Id, currentBook.Name, currentBook.Author, currentBook.YearOfBook, currentBook.Location);
-                //libraryForm.dataGridView1.Rows.Add(currentBook);
             }
             catch
             {
-                MessageBox.Show("Помилки при введенні даних");
+                MessageBox.Show("Помилкa при введенні даних.");
             }
             
             
+            
+
         }
         public void LoadAll()
         {
@@ -237,7 +249,7 @@ namespace TSPPLIB.controller
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Помилки при введенні даних "+ex.StackTrace);
+                MessageBox.Show("Помилки при введенні даних ");
             }
       
         }
