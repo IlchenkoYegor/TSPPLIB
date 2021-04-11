@@ -76,6 +76,11 @@ namespace TSPPLIB.view
 
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.WriteData();
+        }
+
         private void Button6_Click(object sender, EventArgs e)
         {
             controllerLibrary.SaveDataButtonHandler();

@@ -97,7 +97,7 @@ namespace TSPPLIB.view
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 74);
+            this.label1.Size = new System.Drawing.Size(351, 74);
             this.label1.TabIndex = 0;
             this.label1.Text = "КНИГОЛЮБ";
             // 
@@ -118,7 +118,7 @@ namespace TSPPLIB.view
             this.label2.ForeColor = System.Drawing.Color.Chocolate;
             this.label2.Location = new System.Drawing.Point(259, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(452, 65);
+            this.label2.Size = new System.Drawing.Size(454, 65);
             this.label2.TabIndex = 0;
             this.label2.Text = "БІБЛІОТЕКА КНИГ";
             // 
@@ -147,6 +147,7 @@ namespace TSPPLIB.view
             this.button7.TabIndex = 5;
             this.button7.Text = "Зберегти в текстовий файл";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 

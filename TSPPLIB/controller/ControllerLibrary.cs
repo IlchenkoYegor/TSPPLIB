@@ -99,6 +99,7 @@ namespace TSPPLIB.controller
         {
             libraryForm.Visible = false;
             authorizationForm.Visible = true;
+            model.UpdateDataState();
         }
         public void CancelSome(Form r)
         {
@@ -262,5 +263,18 @@ namespace TSPPLIB.controller
             MessageBox.Show("файл listofbooks.txt успішно збережений");
             model.SaveChanges();
         }
-}
+        public void WriteData()
+        {
+            model.ToWrite();
+            MessageBox.Show("Список відібраних книг збережено до файлу resultofsearch.txt.");
+        }
+        public void Remove()
+        {
+            if (libraryForm.dataGridView1.Rows.Count <= 10)
+            {
+                MessageBox.Show("Неможливо видалаити запис. Кількість записів повинна бути більше 10.");        
+                return;
+            }
+        }
+    }
 }
