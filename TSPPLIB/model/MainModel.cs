@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TSPP2.model;
 
 namespace TSPPLIB.model
@@ -62,6 +63,7 @@ namespace TSPPLIB.model
         {
             this.year = year;
             selectedBooks = SelectXX.SelectYear(allBooks, year);
+            //MessageBox.Show(selectedBooks.Count.ToString());
         }
 
         public void FilterByAuthor(string author, string name)

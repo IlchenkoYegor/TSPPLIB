@@ -34,5 +34,10 @@ namespace TSPPLIB.view
         {
             controllerLibrary.AddBook();
         }
+
+        private void CancelAddBtn_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.CancelSome(this);
+        }
     }
 }

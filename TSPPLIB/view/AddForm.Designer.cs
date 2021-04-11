@@ -141,12 +141,14 @@ namespace TSPPLIB.view
             this.cancelAddBtn.TabIndex = 11;
             this.cancelAddBtn.Text = "Скасувати";
             this.cancelAddBtn.UseVisualStyleBackColor = true;
+            this.cancelAddBtn.Click += new System.EventHandler(this.CancelAddBtn_Click);
             // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 353);
+            this.ControlBox = false;
             this.Controls.Add(this.cancelAddBtn);
             this.Controls.Add(this.saveAddBtn);
             this.Controls.Add(this.textBoxLocationAdd);

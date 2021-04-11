@@ -29,6 +29,7 @@ namespace TSPPLIB.view
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,11 +55,13 @@ namespace TSPPLIB.view
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -83,6 +86,7 @@ namespace TSPPLIB.view
             this.button1.TabIndex = 1;
             this.button1.Text = "Вихід";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label1
             // 
@@ -93,7 +97,7 @@ namespace TSPPLIB.view
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 74);
+            this.label1.Size = new System.Drawing.Size(350, 74);
             this.label1.TabIndex = 0;
             this.label1.Text = "КНИГОЛЮБ";
             // 
@@ -114,7 +118,7 @@ namespace TSPPLIB.view
             this.label2.ForeColor = System.Drawing.Color.Chocolate;
             this.label2.Location = new System.Drawing.Point(259, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(454, 65);
+            this.label2.Size = new System.Drawing.Size(452, 65);
             this.label2.TabIndex = 0;
             this.label2.Text = "БІБЛІОТЕКА КНИГ";
             // 
@@ -199,6 +203,7 @@ namespace TSPPLIB.view
             this.button2.TabIndex = 0;
             this.button2.Text = "Пошук";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // groupBox4
             // 
@@ -310,11 +315,16 @@ namespace TSPPLIB.view
             this.Column5.Name = "Column5";
             this.Column5.Width = 80;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // LibraryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 556);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
@@ -322,6 +332,7 @@ namespace TSPPLIB.view
             this.Controls.Add(this.dataGridView1);
             this.Name = "LibraryForm";
             this.Text = "LibraryForm";
+            this.Load += new System.EventHandler(this.LibraryForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -330,6 +341,7 @@ namespace TSPPLIB.view
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,29 +349,30 @@ namespace TSPPLIB.view
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         internal System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button7;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

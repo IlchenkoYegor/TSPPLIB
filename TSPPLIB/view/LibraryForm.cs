@@ -46,13 +46,24 @@ namespace TSPPLIB.view
             controllerLibrary.AddButtonHandler();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
-            List<Book> list = mainModel.getAll();
-            foreach (Book item in list)
-            {
-                dataGridView1.Rows.Add(item.Id, item.Name, item.Author, item.YearOfBook, item.Location);
-            }
+            
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.ToAuthorizationForm();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.Filter();
+        }
+
+        private void LibraryForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

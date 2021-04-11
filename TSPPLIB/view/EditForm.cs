@@ -22,5 +22,10 @@ namespace TSPPLIB.view
         {
             this.controllerLibrary = controllerLibrary;
         }
+
+        private void CancelEditBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

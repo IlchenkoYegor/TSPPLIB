@@ -51,6 +51,7 @@ namespace TSPPLIB.view
             this.cancelEditBtn.TabIndex = 23;
             this.cancelEditBtn.Text = "Скасувати";
             this.cancelEditBtn.UseVisualStyleBackColor = true;
+            this.cancelEditBtn.Click += new System.EventHandler(this.CancelEditBtn_Click);
             // 
             // saveEditBtn
             // 
