@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TSPPLIB.controller;
 
 namespace TSPPLIB.view
 {
@@ -15,6 +16,11 @@ namespace TSPPLIB.view
         public EditForm()
         {
             InitializeComponent();
+        }
+        ControllerLibrary controllerLibrary;
+        public void setController(ControllerLibrary controllerLibrary)
+        {
+            this.controllerLibrary = controllerLibrary;
         }
     }
 }
