@@ -65,5 +65,15 @@ namespace TSPPLIB.view
         {
 
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.EditDataButtonHandler();
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
