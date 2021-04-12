@@ -164,5 +164,101 @@ namespace TSPPLIB.controller
             }
         }
 
-}
+        public void EditDataButtonHandler()
+        {
+            if (libraryForm.dataGridView1.SelectedRows.Count > 0 &&
+            libraryForm.dataGridView1.SelectedRows[0].Index !=
+            libraryForm.dataGridView1.Rows.Count)
+            {
+                edit.Visible = true;
+                edit.textBoxIdEdit.Text = libraryForm.dataGridView1.Rows
+                    [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString();
+                edit.textBoxNameEdit.Text = libraryForm.dataGridView1.Rows
+                    [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[1].Value.ToString();
+                edit.textBoxAuthorEdit.Text = libraryForm.dataGridView1.Rows
+                    [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[2].Value.ToString();
+                edit.textBoxYearEdit.Text = libraryForm.dataGridView1.Rows
+                    [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[3].Value.ToString();
+                edit.textBoxLocationEdit.Text = libraryForm.dataGridView1.Rows
+                    [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[4].Value.ToString();
+                
+
+            }
+        }
+
+        public void Remover()
+        {
+            int idToDel = Convert.ToInt32(libraryForm.dataGridView1.Rows
+     [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString());
+            string nameToDel = libraryForm.dataGridView1.Rows
+                [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[1].Value.ToString();
+            string authorToDel = libraryForm.dataGridView1.Rows
+                [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[2].Value.ToString();
+            int yearOfBookToDel = Convert.ToInt32(libraryForm.dataGridView1.Rows
+                 [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[3].Value.ToString());
+            int locationToDel = Convert.ToInt32(libraryForm.dataGridView1.Rows
+                 [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[4].Value.ToString()); ;
+            Book bookToDel = new Book(idToDel, authorToDel, yearOfBookToDel, nameToDel, locationToDel);
+            //Book bookToDel = libraryForm.dataGridView1.Rows[libraryForm.dataGridView1.SelectedRows[0].Index].DataBoundItem as Book;
+           
+            model.Delete(bookToDel);
+        }
+        public void Remove()
+        {
+            if (libraryForm.dataGridView1.Rows.Count <= 10)
+            {
+                MessageBox.Show("Неможливо видалаити запис. Кількість записів повинна бути більше 10.");
+                return;
+            }
+            Remover();
+            libraryForm.dataGridView1.Rows.RemoveAt(libraryForm.dataGridView1.SelectedRows[0].Index);
+        }
+        public void EditData()
+        {
+            if (edit.textBoxNameEdit.Text == null || edit.textBoxAuthorEdit.Text == null
+    || edit.textBoxNameEdit.Text.Equals("") || edit.textBoxAuthorEdit.Text.Equals(""))
+            {
+                MessageBox.Show("Поля \"Назва\" та \"Автор\" повинні бути заповнені");
+                return;
+            }
+            try
+            {
+                int id = Convert.ToInt32(edit.textBoxIdEdit.Text.ToString());
+                string name = edit.textBoxNameEdit.Text.ToString();
+                string author = edit.textBoxAuthorEdit.Text.ToString();
+                int yearOfBook = Convert.ToInt32(edit.textBoxYearEdit.Text.ToString());
+                int location = Convert.ToInt32(edit.textBoxLocationEdit.Text.ToString());
+                Book currentBook = new TSPP2.model.Book(id, author, yearOfBook, name, location);
+                Remover();
+
+                model.Add(currentBook);
+                edit.Visible = false;
+                libraryForm.Visible = true;
+                libraryForm.dataGridView1.Rows.Insert(libraryForm.dataGridView1.SelectedRows[0].Index,
+                     id, name,
+                     author, yearOfBook, location);
+                libraryForm.dataGridView1.Rows.RemoveAt(libraryForm.dataGridView1.SelectedRows[0].Index);
+                
+                edit.Visible = false;
+                libraryForm.Visible = true;
+                //libraryForm.dataGridView1.Rows.Add(currentBook.Id, currentBook.Name, currentBook.Author, currentBook.YearOfBook, currentBook.Location);
+                //libraryForm.dataGridView1.Rows.Add(currentBook);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Помилки при введенні даних ");
+            }
+            
+        }
+        public void SaveDataButtonHandler()
+        {
+            MessageBox.Show("файл listofbooks.txt успішно збережений");
+            model.SaveChanges();
+        }
+        public void WriteData()
+        {
+            model.ToWrite();
+            MessageBox.Show("Список відібраних книг збережено до файлу resultofsearch.txt.");
+        }
+    }
 }

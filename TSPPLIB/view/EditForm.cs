@@ -25,7 +25,7 @@ namespace TSPPLIB.view
 
         private void CancelEditBtn_Click(object sender, EventArgs e)
         {
-            
+            controllerLibrary.CancelSome(this);
         }
     }
 }
