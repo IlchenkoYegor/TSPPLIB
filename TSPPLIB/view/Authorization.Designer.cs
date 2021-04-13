@@ -30,10 +30,10 @@
         {
             this.toEnterBut = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,17 @@
             this.groupBox1.Size = new System.Drawing.Size(436, 255);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(6, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(426, 30);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "В якості кого ви хочете користуватися? ";
             // 
             // radioButton2
             // 
@@ -106,17 +117,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(6, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(426, 30);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "В якості кого ви хочете користуватися? ";
-            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,7 +127,7 @@
             this.Controls.Add(this.groupBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Authorization";
-            this.Text = "Form1";
+            this.Text = "Authorization";
             this.Load += new System.EventHandler(this.Authorization_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

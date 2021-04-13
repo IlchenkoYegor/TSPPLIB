@@ -40,6 +40,7 @@ namespace TSPP2.model
             {
                 MessageBox.Show("Exception occured !No such file have found!");                
             }
+            Environment.Exit(0);
             return null;
         }
     }
