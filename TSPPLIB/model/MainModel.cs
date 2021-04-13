@@ -50,6 +50,10 @@ namespace TSPPLIB.model
             WriteData.Write(selectedBooks);
         }
         
+        public void UpdateDataState()
+        {
+            selectedBooks = allBooks;
+        }
         
         public List<Book> getAll()
         {

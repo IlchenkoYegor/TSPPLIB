@@ -27,5 +27,10 @@ namespace TSPPLIB.view
         {
             controllerLibrary.CancelSome(this);
         }
+
+        private void SaveEditBtn_Click(object sender, EventArgs e)
+        {
+            controllerLibrary.EditData();
+        }
     }
 }

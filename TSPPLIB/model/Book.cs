@@ -8,6 +8,7 @@ namespace TSPP2.model
 {
     public class Book
     {
+
         private int id;
         private string author;
         private int yearOfBook;
@@ -28,5 +29,15 @@ namespace TSPP2.model
         public int YearOfBook { get => yearOfBook; set => yearOfBook = value; }
         public int Location { get => location; set => location = value; }
         public string Name { get => name; set => name = value; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Book book &&
+                   id == book.id &&
+                   author == book.author &&
+                   yearOfBook == book.yearOfBook &&
+                   name == book.name &&
+                   location == book.location;
+        }
     }
 }
