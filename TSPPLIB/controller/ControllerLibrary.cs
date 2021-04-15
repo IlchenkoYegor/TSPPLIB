@@ -147,10 +147,6 @@ namespace TSPPLIB.controller
             {
                 MessageBox.Show("Помилкa при введенні даних.");
             }
-            
-            
-            
-
         }
         public void LoadAll()
         {
@@ -194,8 +190,6 @@ namespace TSPPLIB.controller
                     [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[3].Value.ToString();
                 edit.textBoxLocationEdit.Text = libraryForm.dataGridView1.Rows
                     [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[4].Value.ToString();
-                
-
             }
         }
 
@@ -212,8 +206,6 @@ namespace TSPPLIB.controller
             int locationToDel = Convert.ToInt32(libraryForm.dataGridView1.Rows
                  [libraryForm.dataGridView1.SelectedRows[0].Index].Cells[4].Value.ToString()); ;
             Book bookToDel = new Book(idToDel, authorToDel, yearOfBookToDel, nameToDel, locationToDel);
-            //Book bookToDel = libraryForm.dataGridView1.Rows[libraryForm.dataGridView1.SelectedRows[0].Index].DataBoundItem as Book;
-           
             model.Delete(bookToDel);
         }
         public void Remove()
@@ -257,8 +249,6 @@ namespace TSPPLIB.controller
                 
                 edit.Visible = false;
                 libraryForm.Visible = true;
-                //libraryForm.dataGridView1.Rows.Add(currentBook.Id, currentBook.Name, currentBook.Author, currentBook.YearOfBook, currentBook.Location);
-                //libraryForm.dataGridView1.Rows.Add(currentBook);
             }
             catch(Exception ex)
             {

@@ -14,8 +14,6 @@ namespace TSPP2.model
 
         internal static void Write(List<Book> listOfBooks)
         {
-
-            //List<Book> listOfBooks = new List<Book>();
             try
             {
                 StreamWriter streamWriter = new StreamWriter(path);
@@ -30,7 +28,6 @@ namespace TSPP2.model
                 int location = stringBuilder.ToString().IndexOf("location");
                 foreach (Book item in listOfBooks)
                 {
-                    
                     stringBuilder.Clear();
                     stringBuilder.Append("                                                                                          ");
                     stringBuilder.Insert(id,item.Id.ToString(), 1);

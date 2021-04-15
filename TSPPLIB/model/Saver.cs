@@ -15,8 +15,6 @@ namespace TSPPLIB.model
 
             internal static void OpenFile(List<Book> listOfBooks)
             {
-
-                //List<Book> listOfBooks = new List<Book>();
                 try
                 {
                     StreamWriter streamWriter = new StreamWriter(path);
@@ -34,11 +32,8 @@ namespace TSPPLIB.model
                     }
                 streamWriter.Close();
                 return;
-                    
-#pragma warning disable CS0168 // Переменная "e" объявлена, но ни разу не использована.
                 }
                 catch (Exception e)
-#pragma warning restore CS0168 // Переменная "e" объявлена, но ни разу не использована.
                 {
                     MessageBox.Show("Exception occured !No such file have found! " +e.StackTrace);
                 }
