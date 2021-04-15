@@ -1,5 +1,5 @@
 ﻿9999,The Great Gatsby,Scott Fitzgerald,1925,77
 8888,The Great Gatsby,Scott Fitzgerald,2001,78
-7777,The Great Gatsby,Scott Fitzgerald,2021,77
+7777,The Great Gatsby,Scott Fitzgerald,2021,79
 1111,Catch-22,Joseph Heller,1961,88
 2222,Catch-22,Joseph Heller,1962,89

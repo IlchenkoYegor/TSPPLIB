@@ -56,7 +56,7 @@ namespace TSPPLIB.view
             controllerLibrary.ToAuthorizationForm();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        public void Button2_Click(object sender, EventArgs e)
         {
             controllerLibrary.Filter();
         }
