@@ -86,7 +86,7 @@ namespace TSPPLIB.view
             controllerLibrary.SaveDataButtonHandler();
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        public void Button5_Click(object sender, EventArgs e)
         {
             controllerLibrary.Remove();
         }

@@ -97,7 +97,7 @@ namespace TSPPLIB.view
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 74);
+            this.label1.Size = new System.Drawing.Size(350, 74);
             this.label1.TabIndex = 0;
             this.label1.Text = "КНИГОЛЮБ";
             // 
@@ -118,7 +118,7 @@ namespace TSPPLIB.view
             this.label2.ForeColor = System.Drawing.Color.Chocolate;
             this.label2.Location = new System.Drawing.Point(259, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(454, 65);
+            this.label2.Size = new System.Drawing.Size(452, 65);
             this.label2.TabIndex = 0;
             this.label2.Text = "БІБЛІОТЕКА КНИГ";
             // 
@@ -378,7 +378,6 @@ namespace TSPPLIB.view
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        internal System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button6;
         public System.Windows.Forms.Button button5;
@@ -390,5 +389,6 @@ namespace TSPPLIB.view
         public System.Windows.Forms.TextBox textBox3;
         public System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
