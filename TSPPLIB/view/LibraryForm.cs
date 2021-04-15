@@ -32,7 +32,6 @@ namespace TSPPLIB.view
             InitializeComponent();
             this.mainModel = mainModel;
             LoadData();
-            //this.dataGridView1.DataSource = mainModel.getAll();
         }
 
         ControllerLibrary controllerLibrary;

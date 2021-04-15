@@ -65,7 +65,6 @@ namespace TSPPLIB.controller
             {
                 libraryForm.errorProvider1.SetError(libraryForm.textBox1, "поле повинне бути заповнене.");
                 libraryForm.errorProvider1.SetError(libraryForm.textBox2, "поле повинне бути заповнене.");
-                //libraryForm.errorProvider1.SetError(libraryForm.textBox3, "поле повинне бути заповнене");
                 return;
             }
             try
@@ -113,6 +112,10 @@ namespace TSPPLIB.controller
             if (libraryForm.dataGridView1.Rows.Count < 10)
             {
                 addForm.cancelAddBtn.Enabled = false;
+            }
+            else
+            {
+                addForm.cancelAddBtn.Enabled = true;
             }
         }
         public void AddBook()

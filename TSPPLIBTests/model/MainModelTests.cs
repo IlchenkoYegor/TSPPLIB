@@ -46,9 +46,6 @@ namespace TSPPLIB.model.Tests
             target.textBox2.Text = "Scott Fitzgerald";
             // пошук
             target.Button2_Click(sender, e);
-
-            //mainModel.FilterByAuthor(target.textBox1.Text, target.textBox2.Text);
-
             List<Book> actual;
             actual = mainModel.getFiltered();
             Assert.AreEqual(expected.Count, actual.Count);
@@ -90,7 +87,6 @@ namespace TSPPLIB.model.Tests
             target.InitializeComponent();
             controllerLibrary.LoadAll();
             // пошук
-            //DataGridViewRow row = null;
             target.dataGridView1.ClearSelection();
             for (int i = target.dataGridView1.RowCount - 1; i >= 0; i--)
             {
