@@ -67,7 +67,6 @@ namespace TSPPLIB.model
         {
             this.year = year;
             selectedBooks = SelectXX.SelectYear(allBooks, year);
-            //MessageBox.Show(selectedBooks.Count.ToString());
         }
 
         public void FilterByAuthor(string author, string name)
