@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSPPLIB", "TSPPLIB\TSPPLIB.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSPPLIBTests", "TSPPLIBTests\TSPPLIBTests.csproj", "{D5A7DBB0-32FA-4338-BB4E-35E397D4953F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupLibraryForm", "SetupLibraryForm\SetupLibraryForm.vdproj", "{9A6E16A3-AFA1-48B8-9EDF-E53A64584EC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +23,17 @@ Global
 		{D5A7DBB0-32FA-4338-BB4E-35E397D4953F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A7DBB0-32FA-4338-BB4E-35E397D4953F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A7DBB0-32FA-4338-BB4E-35E397D4953F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6E16A3-AFA1-48B8-9EDF-E53A64584EC2}.Debug|Any CPU.ActiveCfg = Debug
+		{9A6E16A3-AFA1-48B8-9EDF-E53A64584EC2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC58721D-AD68-4925-ADB8-3DE0EB002116}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 EndGlobal
